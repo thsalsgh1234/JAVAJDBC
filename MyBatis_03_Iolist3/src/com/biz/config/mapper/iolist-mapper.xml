@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.biz.iolist.dao.IolistDao">
+	<select id="selectAll" resultType="Idto"></select>
+	<select id="findById" resultType="Idto"></select>
+	<insert id="insert" parameterType="Idto"></insert>
+	<update id="update" parameterType="Idto"></update>
+	<delete id="delete" parameterType="Idto"></delete>
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.biz.rent.persistence.BookDTO"
+			alias="Bdto" />
+		<typeAlias type="com.biz.rent.persistence.RentBookDTO"
+			alias="RBdto" />
+		<typeAlias type="com.biz.rent.persistence.UserDTO"
+			alias="Udto" />
+			
+		
+	</typeAliases>
+	<environments default="develoment">
+		<environment id="develoment">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@localhost:1521:xe" />
+				<property name="username" value="빛고을" />
+				<property name="password" value="1234" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/biz/rent/config/mapper/book-mapper.xml" />
+		<mapper resource="com/biz/rent/config/mapper/rentbook-mapper.xml" />
+		<mapper resource="com/biz/rent/config/mapper/user-mapper.xml" />
+		
+	</mappers>
+</configuration>
