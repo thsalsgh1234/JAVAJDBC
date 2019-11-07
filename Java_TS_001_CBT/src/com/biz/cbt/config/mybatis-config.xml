@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.biz.cbt.persistence.CbtDTO"
+			alias="CbtDTO" />
+		
+		
+	</typeAliases>
+	<environments default="develoment">
+		<environment id="develoment">
+			<transactionManager type="JDBC" />
+			<dataSource type="POOLED">
+				<property name="driver" value="oracle.jdbc.OracleDriver" />
+				<property name="url"
+					value="jdbc:oracle:thin:@localhost:1521:xe" />
+				<property name="username" value="cbt" />
+				<property name="password" value="cbt" />
+			</dataSource>
+		</environment>
+	</environments>
+	<mappers>
+		<mapper resource="com/biz/cbt/mapper/cbt-mapper.xml" />
+		
+		
+	</mappers>
+</configuration>
