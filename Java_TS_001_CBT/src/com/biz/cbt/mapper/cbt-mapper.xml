@@ -5,7 +5,7 @@
 
 <mapper namespace="com.biz.cbt.dao.CbtDao">
 	
-	<select id="getMaxCBCode" resultType="String">
+	<select id="getMaxCCCode" resultType="String">
 
 		SELECT MAX(cb_seq) FROM
 		tbl_cbt
@@ -74,7 +74,7 @@
 			
 		WHERE CB_SEQ = #{cb_seq}
 	</update>
-	<delete id="delete" parameterType="Cbtdto">
+	<delete id="delete">
 	
 	DELETE FROM tbl_cbt WHERE CB_SEQ = #{cb_seq}
 	
